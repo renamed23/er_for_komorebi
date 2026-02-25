@@ -6,49 +6,16 @@ from pathlib import Path
 from utils_tools.libs import translate_lib
 
 config = {
-    "FONT_FACE": "SimSun",  # (ＭＳ ゴシック, SimHei, SimSun)
-    "CHAR_SET": 134,  # CP932=128, GBK=134
-    # "FONT_FILTER": [
-    #     "ＭＳ ゴシック",
-    #     "俵俽 僑僔僢僋",
-    #     "MS Gothic",
-    #     "",
-    #     "俵俽僑僔僢僋",
-    #     "ＭＳゴシック",
-    # ],
-    "FONT_FILTER": ["Microsoft YaHei", "Microsoft YaHei UI"],
-    # "CHAR_FILTER": [
-    #     0x40
-    # ],
-    # "ENUM_FONT_PROC_CHAR_SET": 128,
-    # "ENUM_FONT_PROC_PITCH": 1,
-    # "ENUM_FONT_PROC_OUT_PRECISION": 3,
     "WINDOW_TITLE": "斑驳树影间，摇曳的灵魂之声",
-    # "ARG_GAME_TYPE": {
-    #     "value": "v1",
-    #     "type": "&str",
-    # },
-    # "HIJACKED_DLL_PATH": "some_path/your_dll.dll",
     "REDIRECTION_SRC_PATH": "GR.052",
     "REDIRECTION_TARGET_PATH": "KOMOREBI_CHS.PAK",
-    # "RESOURCE_PACK_NAME": "MOZU_chs",
 }
 
 hook_lists = {
     "enable": [],
-    "disable": [
-        # "PropertySheetA",
-    ],
+    "disable": [],
 }
 
-
-# patch,custom_font,debug_output,debug_text_mapping
-# default_impl,enum_font_families
-# export_default_dll_main,read_file_patch_impl
-# debug_file_impl,emulate_locale,override_window_title
-# dll_hijacking,export_patch_process_fn,text_patch,text_extracting
-# x64dbg_1337_patch,apply_1337_patch_on_attach,create_file_redirect
-# text_out_arg_c_is_bytes,iat_hook,resource_pack,resource_pack_embedding
 features = [
     "default_impl",
     "iat_hook",
