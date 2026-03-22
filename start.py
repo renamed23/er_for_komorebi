@@ -18,9 +18,10 @@ hook_lists = {
 
 features = [
     "default_impl",
-    "iat_hook",
-    "override_window_title",
-    "create_file_redirect"
+    "enable_iat_hook",
+    "bind_window_title_overrider",
+    "enable_window_title_override",
+    "bind_path_redirector"
 ]
 
 PACKER = "python packer.py"
