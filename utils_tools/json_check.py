@@ -74,13 +74,13 @@ class JSONChecker:
         self.checks = [
             # self.check_special_characters,
             self.check_korean_characters,
-            # self.check_japanese_characters,
+            self.check_japanese_characters,
             self.check_duplicate_quotes,
-            # self.check_length_discrepancy,
-            # self.check_quote_consistency,
+            self.check_length_discrepancy,
+            self.check_quote_consistency,
             self.check_invisible_characters,
-            # self.check_forbidden_words,
-            # self.check_unpaired_quotes,  # 新增：检查未配对的引号
+            self.check_forbidden_words,
+            self.check_unpaired_quotes,  # 新增：检查未配对的引号
             # self.check_max_text_len,
         ]
 

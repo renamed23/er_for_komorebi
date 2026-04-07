@@ -56,7 +56,7 @@ def replace():
         "translated.json", "generated/translated.json", overwrite=True
     )
     translate_lib.copy_path("raw.json", "generated/raw.json", overwrite=True)
-    translate_lib.json_check()
+    # translate_lib.json_check()
     translate_lib.json_process("r", "generated/translated.json")
     translate_lib.ascii_to_fullwidth()
     # cp932,shift_jis,gbk
