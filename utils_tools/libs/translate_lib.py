@@ -380,6 +380,7 @@ class TextHookBuilder:
             "config.json",
             "hook_lists.json",
             "sjis_ext.bin",
+            "vfs_rules.json"
         ]
         for filename in config_files:
             src_file = self.generated_dir / filename
@@ -621,7 +622,7 @@ def auto_wrap():
     print("自动进行换行完成")
 
 
-def generate_json(config: dict, filename: str = "config.json"):
+def generate_json(config, filename: str = "config.json"):
     """
     根据字典生成json
     """

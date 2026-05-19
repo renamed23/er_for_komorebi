@@ -7,8 +7,6 @@ from utils_tools.libs import translate_lib
 
 config = {
     "WINDOW_TITLE": "斑驳树影间，摇曳的灵魂之声",
-    "REDIRECTION_SRC_PATH": "GR.052",
-    "REDIRECTION_TARGET_PATH": "KOMOREBI_CHS.PAK",
 }
 
 hook_lists = {
@@ -21,7 +19,15 @@ features = [
     "enable_iat_hook",
     "bind_window_title_overrider",
     "enable_window_title_override",
-    "bind_path_redirector"
+    "bind_vfs"
+]
+
+vfs_rules = [
+    {
+        "source": "{exe_dir}/GR.052",
+        "target": "{exe_dir}/KOMOREBI_CHS.PAK",
+        "mode": "fallback",  # force, fallback
+    }
 ]
 
 PACKER = "python packer.py"
@@ -52,6 +58,7 @@ def replace():
     # 你的 replace 逻辑
     translate_lib.generate_json(config, "config.json")
     translate_lib.generate_json(hook_lists, "hook_lists.json")
+    translate_lib.generate_json(vfs_rules, "vfs_rules.json")
     translate_lib.copy_path(
         "translated.json", "generated/translated.json", overwrite=True
     )
